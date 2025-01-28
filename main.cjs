@@ -235,7 +235,19 @@ ipcMain.handle('stop-watch', () => {
 
 // Add cleanup on app quit
 app.on('before-quit', () => {
-  if (watchInterval) {
-    clearInterval(watchInterval);
-  }
+    if (watchInterval) {
+        clearInterval(watchInterval);
+    }
+});
+
+// SQL Query Execution Handler
+ipcMain.handle('execute-query', async (event, dbPath, query) => {
+        try {
+                const db = await handleDatabase(dbPath);
+                const results = await db.all(query);
+                await db.close();
+                return { success: true, results };
+        } catch (error) {
+                return { success: false, error: error.message };
+        }
 });

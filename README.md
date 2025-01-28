@@ -5,25 +5,24 @@ SQLite Master is a powerful desktop application built with Electron, React, Vite
 
 ## Features
 - 📊 Visual Database Management
-  - Browse tables and views
+  - Browse tables
   - Execute SQL queries with syntax highlighting
   - View and edit table data
   - Real-time query results
-  - Data export capabilities
-
-- 🛠 Database Operations
-  - Create and manage databases
-  - Import/Export database files
-  - Manage table structures
-  - Execute batch operations
-  - Database backup and restore
 
 - 💻 Modern Interface
   - Clean and intuitive UI
   - Dark theme support
   - Responsive layout
   - Multi-tab query workspace
-  - Customizable workspace
+
+## Upcomming Features
+- 🛠 Database Operations
+  - Create and manage databases
+  - Import/Export database files
+  - Manage table structures
+  - Execute batch operations
+  - Database backup and restore
 
 ## Technology Stack
 - Electron.js - Cross-platform desktop framework
